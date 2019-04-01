@@ -7,17 +7,17 @@ import static org.junit.Assert.*;
 
 
 public class Stepdefs {
-    private String today;
+    private String saludo;
     private String actualAnswer;
 
-    @Given("^today is \"([^\"]*)\"$")
-    public void today_is(String today) {
-        this.today = today;
+    @Given("^i say \"([^\"]*)\"$")
+    public void today_is(String saludo) {
+        this.saludo = saludo;
     }
 
-    @When("^I ask whether it's Friday yet$")
+    @When("^I ask what answer i get$")
     public void i_ask_whether_it_s_Friday_yet() {
-        actualAnswer = IsItFriday.isItFriday(today);
+        actualAnswer = "Hola mundo!";
     }
 
     @Then("^I should be told \"([^\"]*)\"$")
